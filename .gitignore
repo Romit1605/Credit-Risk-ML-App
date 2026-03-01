@@ -1,0 +1,82 @@
+# ==============================================================
+# Credit Risk ML App — .gitignore
+# ==============================================================
+
+# ----- Python bytecode & cache -----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ----- Distribution / packaging -----
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+*.whl
+MANIFEST
+
+# ----- Virtual environments -----
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ----- Environment variable files -----
+.env
+.env.*
+!.env.example
+
+# ----- IDE & editor files -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# ----- OS generated files -----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ----- Jupyter Notebooks -----
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ----- Testing & coverage -----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+
+# ----- Type checking -----
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ----- Logs -----
+*.log
+logs/
+artifacts/logs/
+
+# ----- Project-specific exclusions -----
+# Large dataset — download separately from Kaggle
+data/credit_risk_dataset.csv
+
+# Trained model binaries — regenerate via `python -m src.main --train`
+artifacts/models/
+
+# Keep evaluation metrics visible in the repo
+!artifacts/metrics/
+!artifacts/metrics/metrics.json
